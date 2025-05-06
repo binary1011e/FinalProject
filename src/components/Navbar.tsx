@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -12,18 +12,32 @@ const navItems = [
     href: "/visualizations",
     subItems: [
       { label: "Google Trends", href: "/visualizations/google-trends" },
+      { label: "Reddit Analysis", href: "/visualizations/reddit" },
       { label: "Sentiment Analysis", href: "/visualizations/sentiment" },
       { label: "Debt Index", href: "/visualizations/debt-index" },
+      { label: "Data Appendix", href: "/visualizations/appendix" },
     ],
   },
-  { label: "Results", href: "/results" },
   { label: "Conclusion", href: "/conclusion" },
+  { label: "Reflection", href: "/reflection" },
   { label: "References", href: "/references" },
 ];
 
 export default function Navbar() {
   const path = usePathname();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <nav className="bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-900 text-white shadow-lg">
@@ -46,8 +60,7 @@ export default function Navbar() {
                   <li 
                     key={item.href} 
                     className="relative"
-                    onMouseEnter={() => setOpenDropdown(item.href)}
-                    onMouseLeave={() => setOpenDropdown(null)}
+                    ref={isOpen ? dropdownRef : null}
                   >
                     <button
                       className={`
@@ -83,6 +96,7 @@ export default function Navbar() {
                                     : "text-gray-700 hover:bg-gray-50"
                                   }
                                 `}
+                                onClick={() => setOpenDropdown(null)}
                               >
                                 {subItem.label}
                               </Link>
