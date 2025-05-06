@@ -32,7 +32,7 @@ export default function HomePage() {
               <QuickLink
                 title="Key Findings"
                 description="View our results and conclusions"
-                href="/results"
+                href="/conclusion"
               />
             </div>
           </div>
