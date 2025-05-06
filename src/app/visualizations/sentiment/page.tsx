@@ -55,7 +55,7 @@ export default function SentimentAnalysis() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
                   <div className="relative aspect-[16/9] w-full">
                     <Image
-                      src="/Posts/Economics_Sentiment_Post_Count.png"
+                      src="/Reddit_Sentiments/Posts/Economics_Sentiment_Post_Count.png"
                       alt="Economics posts volume over time"
                       fill
                       className="object-contain"
