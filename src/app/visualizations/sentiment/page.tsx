@@ -16,7 +16,7 @@ export default function SentimentAnalysis() {
           <div className="prose prose-lg max-w-none">
             <h2>Public Sentiment Analysis</h2>
             <p>
-              This section analyzes public sentiment about debt on Reddit. The data is classifed as pos (positive), neg (negative), or (neu)neutral by Twitter-Roberta model, a model used to classify the sentiments of social media posts.
+              This section analyzes public sentiment about debt on Reddit. The data is classifed as pos (positive), neg (negative), or neu (neutral) by Twitter-Roberta model, a model used to classify the sentiments of social media posts.
               The three types of data are: posts containing "national debt" or "national deficit", comments containing "national debt" or "national deficit", and comments on posts containing "national debt" or "national deficit".
             </p>
 
