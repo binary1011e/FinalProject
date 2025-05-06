@@ -12,7 +12,7 @@ export default function DataPage() {
             <h2>Data Sources</h2>
             <ul>
               <li>
-                <strong>Google Trends</strong> - Monthly search term data for debt-related queries
+                <strong>Google Trends</strong> - Monthly search term data for debt-related queries. The graphs made from this data are scaled so that the lowest value is 0 and the highest value is 100. Also, each term is independent of the others;
               </li>
               <li>
                 <strong>Reddit Data</strong> - Historical Reddit posts and comments from 2005-2024 for r/politics and r/economics, totaling 27 GB of data to parse through.
@@ -35,7 +35,7 @@ export default function DataPage() {
             <h2>Data Processing Pipeline for Google Trends</h2>
             <ol>
               <li>Fetch the monthly data from Google Trends for each term</li>
-              <li>Normalize the data to a z score</li>
+              <li>Normalize the data to a Z-score</li>
               <li>Run an OLS regression on inflation expectations to get the coefficients for each term</li>
               <li>Save the data to a csv file. Plot all data using matplotlib.</li>
             </ol>

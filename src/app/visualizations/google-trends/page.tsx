@@ -79,7 +79,7 @@ export default function GoogleTrendsPage() {
           <div className="prose prose-lg max-w-none">
             <h3>Methodology</h3>
             <p>
-             The data is downlaoded from Google Trends and processed through graph.py
+             The data is downloaded from Google Trends and processed through graph.py
             </p>
           </div>
         </div>

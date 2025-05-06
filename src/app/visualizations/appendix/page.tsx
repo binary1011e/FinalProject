@@ -69,7 +69,7 @@ export default function AppendixPage() {
                   </h3>
                   <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-gray-200">
                     <Image
-                      src={graph.path}
+                      src={'' + graph.path}
                       alt={`${category.title} - ${graph.title}`}
                       width={800}
                       height={600}
