@@ -13,7 +13,7 @@ export default function ReflectionPage() {
           <div className="prose prose-lg max-w-none">
             <h2>Project Reflection</h2>
             <p>
-              This was a fun project to work on, but I made an early mistake which sidetracked me. Although I feel I put in the work to have a good project and I am proud of what I did, I feel I didn't meet the expectations I set for myself (But that's not for me to judge).
+              This was a fun project to work on, but I made an early mistake which sidetracked me and cost me a lot of time. Nevertheless, I am loved working on the project and am proud of what I did :D.
             </p>
 
             <h3>Key mistake</h3>
